@@ -471,37 +471,7 @@ try {
     if (epgConfig.enabled) {
         epgManager = new EPGManager(epgConfig);
         console.log(`📺 EPG Manager inizializzato con URL: ${epgConfig.epgUrl}`);
-        
-        // Avvia aggiornamento EPG in background senza bloccare l'avvio
-        setTimeout(() => {
-            if (epgManager) {
-                epgManager.updateEPG().then(success => {
-                    if (success) {
-                        console.log(`✅ EPG aggiornato con successo in background`);
-                    } else {
-                        console.log(`⚠️ Aggiornamento EPG fallito in background, verrà ritentato al prossimo utilizzo`);
-                    }
-                }).catch(error => {
-                    console.error(`❌ Errore durante l'aggiornamento EPG in background:`, error);
-                });
-            }
-        }, 1000);
-        
-        // Programma aggiornamenti periodici dell'EPG (ogni 6 ore)
-        setInterval(() => {
-            if (epgManager) {
-                console.log(`🔄 Aggiornamento EPG periodico avviato...`);
-                epgManager.updateEPG().then(success => {
-                    if (success) {
-                        console.log(`✅ EPG aggiornato periodicamente con successo`);
-                    } else {
-                        console.log(`⚠️ Aggiornamento EPG periodico fallito`);
-                    }
-                }).catch(error => {
-                    console.error(`❌ Errore durante l'aggiornamento EPG periodico:`, error);
-                });
-            }
-        }, epgConfig.updateInterval);
+        console.log(`📺 EPG configurato in modalità LIVE - i dati verranno caricati solo su richiesta`);
     }
 } catch (error) {
     console.error('❌ Errore nel caricamento dei file di configurazione TV:', error);
