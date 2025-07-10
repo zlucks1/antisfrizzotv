@@ -1,0 +1,4 @@
+2025-07-10T21:05:02.108Z - Incoming request: GET /catalog/tv/StreamViX-TV.json 
+2025-07-10T21:05:02.109Z - Full URL: /catalog/tv/StreamViX-TV.json 
+2025-07-10T21:05:02.110Z - Path segments: [["","catalog","tv","StreamViX-TV.json"]]
+2025-07-10T21:05:02.110Z - Config string extracted: "catalog" (length: 7) 
