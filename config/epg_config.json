@@ -2,7 +2,7 @@
   "epgUrl": "https://github.com/nzo66/TV/raw/refs/heads/main/epg.xml",
   "updateInterval": 21600000,
   "cacheDir": "cache",
-  "enabled": true,
+  "enabled": false,
   "supportedFormats": ["xml"],
   "timeout": 30000,
   "maxRetries": 3
